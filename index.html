@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2 class="logo">Shield<span>.</span></h2>
+        <p class="side-label">MENU</p>
+
+        <nav>
+            <a href="#dashboard" class="active">▦ Dashboard</a>
+            <a href="#transactions">▤ Transactions</a>
+            <a href="#detection">⌕ Fraud Detection</a>
+            <a href="#analytics">▥ Analytics</a>
+            <a href="#alerts">⚑ Alerts</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Fraud Monitoring System</p>
+            <small>Version 1.0.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Monitor and manage transaction activity.</p>
+            </div>
+            <div class="profile">
+                <span class="status-dot"></span>
+                Admin
+            </div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Transactions</p>
+                <h2>24,850</h2>
+                <small>Overall transactions</small>
+            </div>
+
+            <div class="stat-card">
+                <p>Fraud Detected</p>
+                <h2 class="red">386</h2>
+                <small>Flagged transactions</small>
+            </div>
+
+            <div class="stat-card">
+                <p>Safe Transactions</p>
+                <h2 class="green">24,464</h2>
+                <small>Transactions not flagged</small>
+            </div>
+
+            <div class="stat-card">
+                <p>Fraud Rate</p>
+                <h2>1.55%</h2>
+                <small>Of total transactions</small>
+            </div>
+
+        </section>
+
+        <section class="content-grid" id="analytics">
+
+            <div class="panel chart-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Transaction Overview</h3>
+                        <p>Recent transaction activity</p>
+                    </div>
+                    <span class="tag">Last 7 days</span>
+                </div>
+
+                <div class="chart">
+                    <div class="bar-group">
+                        <div class="bar" style="height:65%"></div>
+                        <span>Mon</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:85%"></div>
+                        <span>Tue</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:55%"></div>
+                        <span>Wed</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:95%"></div>
+                        <span>Thu</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:70%"></div>
+                        <span>Fri</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:45%"></div>
+                        <span>Sat</span>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height:80%"></div>
+                        <span>Sun</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="alerts">
+                <h3>Recent Alerts</h3>
+                <p class="muted">Latest flagged activity</p>
+
+                <div class="alert-item">
+                    <span class="alert-icon">!</span>
+                    <div>
+                        <strong>Unusual transaction</strong>
+                        <small>Transaction #TX2041</small>
+                    </div>
+                </div>
+
+                <div class="alert-item">
+                    <span class="alert-icon">!</span>
+                    <div>
+                        <strong>High transaction amount</strong>
+                        <small>Transaction #TX2038</small>
+                    </div>
+                </div>
+
+                <div class="alert-item">
+                    <span class="alert-icon">!</span>
+                    <div>
+                        <strong>Unusual location</strong>
+                        <small>Transaction #TX2032</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel transaction-panel" id="transactions">
+            <div class="panel-heading">
+                <div>
+                    <h3>Recent Transactions</h3>
+                    <p>Review recent payment activity</p>
+                </div>
+
+                <input type="text" id="searchInput"
+                    placeholder="Search transactions...">
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Amount</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionTable">
+                        <tr>
+                            <td>TX2041</td>
+                            <td>₹45,000</td>
+                            <td>Delhi</td>
+                            <td>13 Nov 2026</td>
+                            <td><span class="badge fraud">Fraud</span></td>
+                        </tr>
+                        <tr>
+                            <td>TX2040</td>
+                            <td>₹2,500</td>
+                            <td>Mumbai</td>
+                            <td>13 Nov 2026</td>
+                            <td><span class="badge safe">Safe</span></td>
+                        </tr>
+                        <tr>
+                            <td>TX2039</td>
+                            <td>₹8,900</td>
+                            <td>Bangalore</td>
+                            <td>12 Nov 2026</td>
+                            <td><span class="badge safe">Safe</span></td>
+                        </tr>
+                        <tr>
+                            <td>TX2038</td>
+                            <td>₹95,000</td>
+                            <td>Unknown</td>
+                            <td>12 Nov 2026</td>
+                            <td><span class="badge fraud">Fraud</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel detection-panel" id="detection">
+            <h3>Check a Transaction</h3>
+            <p class="muted">Enter transaction details for a sample risk assessment.</p>
+
+            <form id="fraudForm">
+                <div class="form-grid">
+                    <div>
+                        <label>Transaction Amount (₹)</label>
+                        <input type="number" id="amount"
+                            placeholder="Enter amount" min="0.01"
+                            step="0.01" required>
+                    </div>
+
+                    <div>
+                        <label>Transaction Location</label>
+                        <input type="text" id="location"
+                            placeholder="Enter location" required>
+                    </div>
+
+                    <div>
+                        <label>Transactions in Last Hour</label>
+                        <input type="number" id="frequency"
+                            placeholder="Enter number" min="0" required>
+                    </div>
+
+                    <div>
+                        <label>Device Recognized?</label>
+                        <select id="device">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Check Transaction</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </section>
+
+        <footer>
+            Credit Card Fraud Detection System © 2026
+        </footer>
+
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
