@@ -1,0 +1,21 @@
+id,amount,location,frequency,device,risk_score,status,reason,timestamp
+TX1001,1200.0,Delhi,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 10:15:20
+TX1002,450.0,Mumbai,2,1,13.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 10:45:00
+TX1003,85000.0,Delhi,7,0,94.0,FRAUD,"High transaction amount, unusually high transaction frequency, and unrecognized device",2026-11-16 11:20:10
+TX1004,2300.0,Bengaluru,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 11:55:30
+TX1005,65000.0,Unknown Location,2,0,89.0,FRAUD,"High transaction amount, unrecognized device, and suspicious transaction location",2026-11-16 12:10:45
+TX1006,350.0,Chennai,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 12:35:10
+TX1007,18000.0,Kolkata,3,1,21.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 13:00:22
+TX1008,125000.0,Mumbai,1,0,85.0,FRAUD,"Extremely high transaction amount and unrecognized device",2026-11-16 13:40:05
+TX1009,4200.0,Pune,2,1,13.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 14:15:30
+TX1010,7500.0,Hyderabad,8,1,31.0,LEGITIMATE,"Unusually high transaction frequency",2026-11-16 14:50:18
+TX1011,92000.0,International Proxy,11,0,100.0,FRAUD,"Extremely high transaction amount, rapid burst of transactions, unrecognized device, and suspicious transaction location",2026-11-16 15:22:40
+TX1012,1500.0,Jaipur,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 15:45:12
+TX1013,31000.0,Delhi,2,1,27.0,LEGITIMATE,"Elevated transaction amount",2026-11-16 16:10:00
+TX1014,54000.0,Chandigarh,5,0,85.0,FRAUD,"High transaction amount, elevated transaction velocity, and unrecognized device",2026-11-16 16:40:55
+TX1015,800.0,Ahmedabad,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 17:05:14
+TX1016,145000.0,Delhi,1,1,49.0,LEGITIMATE,"Extremely high transaction amount",2026-11-16 17:30:20
+TX1017,45000.0,Goa,6,0,79.0,FRAUD,"Elevated transaction amount, unusually high transaction frequency, and unrecognized device",2026-11-16 18:12:05
+TX1018,2900.0,Lucknow,1,1,9.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 18:45:30
+TX1019,78000.0,Darknet Gateway,4,0,98.0,FRAUD,"High transaction amount, elevated transaction velocity, unrecognized device, and suspicious transaction location",2026-11-16 19:20:11
+TX1020,1100.0,Bhopal,2,1,13.0,LEGITIMATE,"Normal transaction pattern",2026-11-16 19:55:00
